@@ -1,46 +1,185 @@
-# Clinical Decision Support System (CDSS)
+# 🏥 Clinical Decision Support System (CDSS)
 
-A console-based Clinical Decision Support System developed in **C++17** for a college project. It stores patient records and symptom-review history in local text files.
+A simple, console-based **Clinical Decision Support System (CDSS)** developed using **C++** as a college academic project.
 
-## Features
+The system helps organize basic patient information and symptom-review records through a menu-driven interface. It demonstrates fundamental programming concepts such as object-oriented programming, file handling, input validation, and structured data management.
 
-1. Patient registration with automatically generated patient IDs.
-2. View all registered patients.
-3. Create and save a symptom review.
-4. View a patient's assessment history.
-5. Search for a patient by ID.
+---
 
-## Requirements
+## 📌 Project Overview
 
-- C++17-compatible compiler (GCC recommended)
-- VS Code (optional)
-- MSYS2 UCRT64 terminal (Windows setup used for development)
+The Clinical Decision Support System is designed to provide a basic and organized way to manage patient records and preliminary symptom reviews.
 
-## Compile
+The application allows users to register patients, search patient information, record symptoms, and view previous assessment history.
 
-Open the terminal in the project folder and run:
+This project is developed for educational purposes to demonstrate how a rule-based healthcare information system can be implemented using C++.
 
-```bash
-g++ -std=c++17 -Wall -Wextra -pedantic main.cpp CDSS.cpp -o cdss.exe
+---
+
+## ✨ Features
+
+- **Patient Registration** — Register patients with basic personal details.
+- **Automatic Patient ID** — Generate a unique patient ID for each registered patient.
+- **View All Patients** — Display the list of registered patients.
+- **Symptom Review** — Record patient symptoms and select a preliminary symptom category.
+- **Assessment History** — View previously recorded symptom reviews for a patient.
+- **Search Patient** — Find a patient using their unique patient ID.
+- **Input Validation** — Validate selected inputs to reduce incorrect entries.
+- **Local File Storage** — Store patient and assessment records in local text files.
+
+---
+
+## 🛠️ Technologies Used
+
+- C++
+- Object-Oriented Programming (OOP)
+- File Handling
+- Standard Template Library (STL)
+- Git and GitHub
+- Visual Studio Code
+
+---
+
+## 📂 Project Structure
+
+```text
+Clinical-Decision-Support-System/
+│
+├── main.cpp
+├── CDSS.cpp
+├── CDSS.h
+├── Patient.h
+├── README.md
+├── .gitignore
+│
+└── data/
+    ├── patients.txt
+    └── assessments.txt
 ```
 
-## Run
+### File Description
+
+| File | Description |
+|---|---|
+| `main.cpp` | Main program and menu |
+| `CDSS.cpp` | CDSS functionality and operations |
+| `CDSS.h` | CDSS class declaration |
+| `Patient.h` | Patient data structure |
+| `README.md` | Project documentation |
+| `.gitignore` | Excludes local data and compiled files |
+| `data/` | Stores local patient and assessment records |
+
+---
+
+## 💻 Requirements
+
+- GCC C++ compiler
+- Windows operating system
+- VS Code (recommended, but optional)
+- Git (optional, for version control)
+
+---
+
+## 🚀 How to Run the Project
+
+### Step 1: Clone the Repository
 
 ```bash
-./cdss.exe
+git clone https://github.com/ashwani612/Clinical-Decision-Support-System.git
 ```
 
-The application creates a `data` directory and the following local files on first run:
+### Step 2: Open the Project Folder
+
+```bash
+cd Clinical-Decision-Support-System/Clinical-Decision-Support-System
+```
+
+### Step 3: Create the Data Folder
+
+If the `data` folder does not already exist, create it:
+
+```bash
+mkdir data
+```
+
+### Step 4: Compile the Program
+
+```bash
+g++ -std=c++14 -Wall -Wextra -pedantic main.cpp CDSS.cpp -o cdss.exe
+```
+
+### Step 5: Run the Application
+
+In Windows PowerShell:
+
+```powershell
+.\cdss.exe
+```
+
+---
+
+## 📋 Application Menu
+
+The application provides the following menu options:
+
+```text
+========== CLINICAL DECISION SUPPORT SYSTEM ==========
+
+1. Register Patient
+2. View All Patients
+3. Create Symptom Review
+4. View Patient Assessment History
+5. Search Patient by ID
+0. Exit
+```
+
+---
+
+## 💾 Data Storage
+
+Patient and assessment information is stored locally in text files:
 
 - `data/patients.txt`
 - `data/assessments.txt`
 
-These files contain local records and are intentionally excluded from Git using `.gitignore`. Do not commit real patient information.
+The application uses the pipe (`|`) character as a field separator.
 
-## Data format
+The `data/` directory and compiled executable files are excluded from GitHub using `.gitignore`.
 
-The files use the pipe (`|`) character as a field separator. The application removes pipe characters from entered text to preserve the format.
+**Privacy Note:** Do not enter or upload real patient information. Use fictional sample data for demonstrations and academic submissions.
 
-## Important limitation
+---
 
-This is an educational, rule-based demonstration. It is **not a validated medical device**, does not diagnose disease, and must not be used to make real clinical decisions. Recommendations are generic prompts to seek professional assessment.
+## 🎯 Project Objectives
+
+- To understand the practical implementation of C++ programming.
+- To demonstrate object-oriented programming concepts.
+- To implement file handling for persistent data storage.
+- To develop a basic patient information management system.
+- To demonstrate a simple rule-based symptom-review workflow.
+- To practice software development and version control using GitHub.
+
+---
+
+## ⚠️ Disclaimer
+
+This project is an **educational prototype only**.
+
+It is not a validated medical device and does not diagnose, treat, or prevent any disease. The symptom-review categories and recommendations are basic demonstration logic and must not be used for real clinical decisions.
+
+Always consult a qualified healthcare professional for medical advice.
+
+---
+
+## 👨‍🎓 Academic Project
+
+**Project Title:** Clinical Decision Support System  
+**Project Type:** College Academic Project  
+**Programming Language:** C++  
+**Version:** Evolution 1
+
+---
+
+## 📜 License
+
+This project is created for educational and academic purposes.
