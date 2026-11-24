@@ -1,0 +1,17 @@
+# Local patient and assessment data (never upload real patient information)
+data/
+*.txt
+
+# Compiled files and executables
+*.exe
+*.o
+*.obj
+*.out
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
